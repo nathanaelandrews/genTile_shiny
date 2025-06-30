@@ -1,0 +1,42 @@
+name: gentile_env
+channels:
+  - conda-forge
+  - bioconda
+  - r
+dependencies:
+  # Core system dependencies (confirmed available)
+  - bedtools>=2.30.0           # bioconda - CONFIRMED
+  - openjdk>=11               # conda-forge - CONFIRMED  
+  - wget                      # conda-forge - CONFIRMED
+  - curl                      # conda-forge - CONFIRMED
+  
+  # R and core R packages (all confirmed on conda-forge)
+  - r-base>=4.2.0             # conda-forge - CONFIRMED
+  - r-shiny>=1.7.0            # conda-forge - CONFIRMED
+  - r-shinydashboard>=0.7.0   # conda-forge - CONFIRMED  
+  - r-dt>=0.24.0              # conda-forge - CONFIRMED
+  - r-plotly>=4.10.0          # conda-forge - CONFIRMED
+  - r-shinywidgets>=0.7.0     # conda-forge - CONFIRMED
+  - r-dplyr>=1.0.0            # conda-forge - CONFIRMED
+  - r-readr>=2.1.0            # conda-forge - CONFIRMED
+  - r-ggplot2>=3.4.0          # conda-forge - CONFIRMED
+  
+  # Additional R dependencies for Shiny apps  
+  - r-htmlwidgets>=1.5.0      # conda-forge - CONFIRMED
+  - r-jsonlite>=1.8.0         # conda-forge - CONFIRMED
+  - r-promises>=1.2.0         # conda-forge - CONFIRMED
+  - r-httpuv>=1.6.0          # conda-forge - CONFIRMED
+  - r-htmltools>=0.5.0       # conda-forge - CONFIRMED
+  - r-rlang>=1.0.0           # conda-forge - CONFIRMED
+  - r-digest>=0.6.0          # conda-forge - CONFIRMED
+  - r-mime>=0.12             # conda-forge - CONFIRMED
+  
+  # Bioinformatics tools (confirmed available)
+  - samtools>=1.15           # bioconda - CONFIRMED
+  - bcftools>=1.15           # bioconda - CONFIRMED
+  - tabix>=1.11              # bioconda - CONFIRMED
+  
+  # Development and utility tools
+  - git                      # conda-forge - CONFIRMED
+  - nano                     # conda-forge - CONFIRMED
+  - vim                      # conda-forge - CONFIRMED
