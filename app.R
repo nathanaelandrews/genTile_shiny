@@ -236,8 +236,6 @@ ui <- dashboardPage(
               plotlyOutput("genome_plot", height = "400px"),
               br(),
               
-              # Guide statistics plots
-              plotlyOutput("score_distribution", height = "300px")
             ),
             
             conditionalPanel(
@@ -564,14 +562,6 @@ server <- function(input, output, session) {
     create_genome_plot(values$guides_data, input$selected_gene, values$pipeline_results$bed_data)
   })
   
-  output$score_distribution <- renderPlotly({
-    if (is.null(values$guides_data)) {
-      return(plot_ly() %>% add_text(text = "No data available", 
-                                   x = 0.5, y = 0.5, showlegend = FALSE))
-    }
-    
-    create_score_distribution_plot(values$guides_data)
-  })
 }
 
 # Run the app
